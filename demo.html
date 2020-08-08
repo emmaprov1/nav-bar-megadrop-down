@@ -1,0 +1,302 @@
+<html>
+
+<head>
+    <title>
+        Drop down menu design
+    </title>
+
+    <link href="assets/fontawesome/css/all.min.css" rel="stylesheet">
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-image: url('assets/images/shutterstock_1325965838.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif;
+        }
+        /*  .menu-bar {
+            background: rgb(0, 100, 0);
+            text-align: center;
+        }
+        
+        .menu-bar ul {
+            display: inline-flex;
+            list-style: none;
+        }
+        
+        .menu-bar ul li {
+            width: 100px;
+            margin: 15px;
+            padding: 15px;
+        }
+        
+        .menu-bar ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        .active,
+        .menu-bar ul li:hover {
+            background: #2bab0d;
+            border-radius: 3px;
+        }
+        
+        .sub-menu-1 {
+            display: none;
+        }
+        
+        .menu-bar ul li:hover .sub-menu-1 {
+            display: block;
+            position: absolute;
+            background-color: rgb(90, 100, 0);
+            margin-top: 15px;
+            margin-left: -15px;
+        }
+        
+        .menu-bar ul li:hover .sub-menu-1 ul {
+            display: block;
+            margin: 10px;
+        }
+        
+        .menu-bar ul li:hover .sub-menu-1 ul li {
+            width: 150px;
+            padding: 10px;
+            border-bottom: 1px dotted #fff;
+            background: transparent;
+            border-radius: 0;
+            text-align: left;
+        }
+        
+        .menu-bar ul li:hover .sub-menu-1 ul li: last-child {
+            border-bottom: none;
+        }
+        
+        .menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+            color: #2bff00;
+        }
+        
+        .fa-angle-right {
+            color: white;
+            float: right;
+        }
+        
+        .sub-menu-2 {
+            display: none;
+        }
+        
+        .hover-me:hover .sub-menu-2 {
+            display: block;
+            position: absolute;
+            margin-top: -40px;
+            margin-left: 140px;
+            background: rgb(0, 100, 0);
+        } */
+        
+        .wrapper {
+            width: 1170px;
+            margin: 20px auto;
+        }
+        
+        nav {
+            position: absolute;
+            font-size: 16px;
+            background: #262626;
+        }
+        
+        nav>ul {
+            position: relative;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            justify-content: center;
+            width: 1170px;
+            margin: 0 auto;
+        }
+        
+        nav a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        nav ul li {
+            list-style-type: none;
+            color: #fff;
+            transition: 0.5s;
+        }
+        
+        ul img {
+            width: 85%;
+        }
+        
+        nav>ul>li>a {
+            padding: 15px 25px;
+        }
+        
+        nav>ul>li.dropdown>a:after {
+            position: relative;
+            float: right;
+            content: '';
+            margin-left: 10px;
+            margin-top: 8px;
+        }
+        
+        nav>ul>li:hover {
+            background: #668fc5;
+        }
+        
+        nav ul.menu-area {
+            padding: 40px 40px 0px 40px;
+            background: #fff;
+            text-align: left;
+            border-top: 5px solid #164c82;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+            z-index: 1;
+            position: absolute;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            flex-wrap: wrap;
+            width: 1170px;
+            top: -999px;
+            left: 0;
+        }
+        
+        nav ul li:hover ul.menu-area {
+            top: 100%;
+        }
+        
+        nav ul .menu-area ul {
+            width: 25%;
+            margin-bottom: 40px;
+            color: #262626
+        }
+        
+        nav ul .menu-area h4 {
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        nav ul .menu-area li a {
+            color: #262626;
+            text-transform: capitalize;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- <div class="menu-bar">
+        <ul>
+            <li class="active"><a href="#"><i class="fa fa-home"></i>Home </a></li>
+            <li>
+                <a href="#"> About us </a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li class="hover-me"><a href="#">Mission</a> <i class="fa fa-angle-right"></i>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="#">Mission</a> </li>
+                                    <li><a href="#">Vision</a> </li>
+                                    <li><a href="#">Team</a> </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Vision</a> <i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Team</a> <i class="fa fa-angle-right"></i> </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">Client</a>
+            </li>
+            <li>
+                <a href="#">Investors</a>
+            </li>
+            <li>
+                <a href="#"> Pricing</a>
+            </li>
+            <li>
+                <a href="#"> Training</a>
+            </li>
+            <li>
+                <a href="#"> Contact</a>
+            </li>
+        </ul>
+    </div> -->
+
+
+
+    <style>
+
+    </style>
+
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="#">About</a> </li>
+
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <ul class="menu-area">
+                        <ul>
+                            <h4>Our Company</h4>
+                            <img src="assets/images/slider1.jpg" width="400px">
+                        </ul>
+                        <ul>
+                            <h4>Graphics design</h4>
+                            <li><a href="#">Logo design</a></li>
+                            <li><a href="#">Brochure design</a></li>
+                            <li><a href="#">Template design</a></li>
+                            <li><a href="#">Card design</a></li>
+                        </ul>
+                        <ul>
+                            <h4>Web design</h4>
+                            <li><a href="#">Html website</a></li>
+                            <li><a href="#">Wordpress website</a></li>
+                            <li><a href="#">Joomla website</a></li>
+                            <li><a href="#">Magento website</a></li>
+                            <li><a href="#">Blogger website</a></li>
+                        </ul>
+                        <ul>
+                            <h4>Photography</h4>
+                            <li><a href="#">Fashion Photography</a></li>
+                            <li><a href="#">portrait Photography</a></li>
+                            <li><a href="#">Fine art Photography</a></li>
+                            <li><a href="#">Sport Photography</a></li>
+                            <li><a href="#">Aerial Photography</a></li>
+                        </ul>
+                    </ul>
+                </li>
+                <li> <a href="#">Portfolio</a></li>
+                <li>
+                    <a href="#"> FAQ</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+
+</html>
